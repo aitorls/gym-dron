@@ -192,7 +192,7 @@ class Dron2dron_3DD(gym.Env):
     
     self.dron1_pos = other_dron_position(self.dron1_pos)
     
-    self.dron2_pos = self.dron2_pos+self.MOVS[action.item()]
+    self.dron2_pos = self.dron2_pos+self.MOVS[action[0]]
 
     # Account for the boundaries of the grid
     self.dron2_pos = np.clip(self.dron2_pos, -self.grid_size, self.grid_size) #torch.clamp

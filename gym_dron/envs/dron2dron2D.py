@@ -176,8 +176,6 @@ class Dron2dron_2DD(gym.Env):
     
     self.dron1_pos = other_dron_position(self.dron1_pos)
     
-    print(self.MOVS)
-    print(action)
     self.dron2_pos = self.dron2_pos+self.MOVS[action]
 
     # Account for the boundaries of the grid
